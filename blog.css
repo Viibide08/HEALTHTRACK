@@ -1,0 +1,110 @@
+/* estilos.css */
+
+/* Reset básico e tipografia geral */
+body {
+    font-family: Arial, sans-serif; /* Fonte legível */
+    line-height: 1.6; /* Espaçamento entre linhas para melhor leitura */
+    margin: 0; /* Remove margens padrão do navegador */
+    padding: 0;
+    background-color: #f4f4f4; /* Fundo cinza claro */
+    color: #333; /* Cor do texto principal */
+}
+
+/* Estilizando o cabeçalho (header) */
+header {
+    background-color: #397eb0; /* Verde nutrição */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+/* Estilizando o conteúdo principal (main) */
+main {
+    max-width: 900px; /* Largura máxima para centralizar o conteúdo */
+    margin: 20px auto; /* Centraliza a caixa e adiciona margem no topo/base */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilizando as seções de artigo */
+section {
+    margin-bottom: 30px;
+    padding: 15px;
+    border-left: 5px solid #8BC34A; /* Linha lateral verde mais clara */
+}
+
+section h2 {
+    color: #388E3C; /* Título verde escuro */
+    border-bottom: 2px solid #E8F5E9; /* Linha sob o título */
+    padding-bottom: 5px;
+}
+
+section h3 {
+    color: #689F38;
+    margin-top: 20px;
+}
+
+/* Estilizando listas (ul) */
+ul {
+    list-style-type: square; /* Marcadores quadrados */
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+/* Estilizando o rodapé (footer) */
+footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    background-color: #ddd;
+    color: #555;
+    font-size: 0.9em;
+}
+
+/* Estilizando a linha divisória (hr) */
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+    margin: 40px 0;
+}
+
+
+
+
+/* Barra de pesquisa */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.search-bar input {
+    width: 60%;
+    padding: 10px;
+    border: 2px solid #8BC34A;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    border: 2px solid #8BC34A;
+    border-left: 0;
+    background-color: #8BC34A;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+.search-bar button:hover {
+    background-color: #689F38;
+}

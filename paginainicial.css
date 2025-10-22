@@ -1,0 +1,260 @@
+/* Definição das Variáveis de Cores (Consistente com as outras páginas) */
+:root {
+    --verde-claro: #a8dadc; /* Verde/Ciano suave, frescor */
+    --verde-escuro: #1d3557; /* Azul/Verde marinho, confiança */
+    --off-white: #f1faee; /* Branco bem suave, fundo principal */
+    --cor-texto: #457b9d; /* Azul médio, legibilidade */
+    --cor-destaque: #e63946; /* Vermelho/Coral para CTAs */
+    --cor-sucesso: #70c1b3; /* Um verde intermediário para sucesso */
+}
+
+/* 1. Reset e Estilos Base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--cor-texto);
+    background-color: var(--off-white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: var(--verde-escuro);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+/* 2. Cabeçalho (Header e Navegação) */
+header {
+    background-color: var(--verde-escuro);
+    color: var(--off-white);
+    padding: 15px 0;
+    /* Usando Flexbox para alinhar logo, título e navegação */
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Distribui o espaço entre os elementos principais */
+    flex-wrap: wrap; /* Para garantir responsividade */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Garantir que o container use a largura máxima */
+    width: 100%; 
+    max-width: 1200px;
+}
+
+header img {
+    /* O HTML tem style inline, mas é bom ter uma regra aqui também */
+    width: 100px; 
+    height: auto;
+    margin-right: 20px;
+}
+
+header h1 {
+    color: var(--off-white);
+    margin: 0;
+    font-size: 1.8em;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li a {
+    color: var(--off-white);
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+header nav ul li a:hover {
+    background-color: var(--verde-claro);
+    color: var(--verde-escuro);
+}
+
+/* 3. Hero Section (A primeira grande tela) */
+.hero {
+    background-color: var(--verde-claro);
+    padding: 100px 20px;
+    text-align: center;
+    min-height: 400px;
+    /* Gradiente para um visual moderno (opcional, mas sofisticado) */
+    background-image: linear-gradient(135deg, var(--verde-claro) 0%, var(--verde-claro) 70%, var(--off-white) 100%); 
+}
+
+.hero h2 {
+    font-size: 3em;
+    color: var(--verde-escuro);
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero p {
+    font-size: 1.3em;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    color: var(--verde-escuro);
+}
+
+/* 4. Botão CTA principal */
+.btn-cta {
+    display: inline-block;
+    background-color: var(--cor-destaque);
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px; 
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-cta:hover {
+    background-color: #c93540; 
+    transform: scale(1.05);
+}
+
+/* 5. Seção de Serviços (Grid) */
+.servicos-section {
+    padding: 60px 0;
+    background-color: var(--off-white);
+    text-align: center;
+}
+
+.servicos-section h2 {
+    font-size: 2.2em;
+    margin-bottom: 40px;
+}
+
+.servicos-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap; /* Responsividade */
+}
+
+.servico-item {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px; /* Blocos Arredondados */
+    box-shadow: 0 8px 15px rgba(29, 53, 87, 0.1);
+    width: 30%; /* 3 itens por linha */
+    min-width: 280px;
+    transition: transform 0.3s ease, border-top 0.3s;
+    border-top: 5px solid var(--verde-escuro); /* Linha de destaque */
+}
+
+.servico-item:hover {
+    transform: translateY(-5px);
+    border-top-color: var(--verde-claro);
+    box-shadow: 0 12px 20px rgba(29, 53, 87, 0.15);
+}
+
+.servico-item h3 {
+    color: var(--verde-escuro);
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.servico-item p {
+    color: var(--cor-texto);
+}
+
+/* 6. Seção Blog/Sobre Nós (Chamada secundária) */
+.SobreNós-section {
+    background-color: var(--verde-escuro);
+    color: var(--off-white);
+    padding: 50px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.SobreNós-section h2 {
+    color: var(--off-white);
+    margin-bottom: 10px;
+}
+
+.SobreNós-section p {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.btn-secundario {
+    display: inline-block;
+    background-color: var(--verde-claro);
+    color: var(--verde-escuro);
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-secundario:hover {
+    background-color: white;
+}
+
+/* 7. Rodapé */
+footer {
+    background-color: var(--verde-escuro);
+    color: var(--off-white);
+    text-align: center;
+    padding: 20px 0;
+    border-top: 3px solid var(--verde-claro);
+}
+
+/* 8. Responsividade */
+@media (max-width: 900px) {
+    .servico-item {
+        width: 45%; /* 2 colunas em tablets */
+    }
+
+    .hero h2 {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 600px) {
+    header .container {
+        flex-direction: column;
+    }
+    
+    header h1 {
+        margin-bottom: 10px;
+    }
+    
+    header nav ul {
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .servico-item {
+        width: 100%; /* 1 coluna em celulares */
+    }
+}

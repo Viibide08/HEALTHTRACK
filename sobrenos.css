@@ -1,0 +1,253 @@
+/* Definição das Variáveis de Cores */
+:root {
+    --verde-claro: #a8dadc; /* Um verde/ciano suave, remetendo à frescura */
+    --verde-escuro: #1d3557; /* Um azul/verde marinho, forte e confiável */
+    --off-white: #f1faee; /* Branco bem suave, para evitar o brilho do branco puro */
+    --cor-texto: #457b9d; /* Um azul médio, mais legível que o verde escuro puro em fundos claros */
+    --cor-destaque: #e63946; /* Um toque de cor (vermelho/coral) para links e botões, opcional */
+}
+
+/* 1. Estilos Base e Tipografia */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Fonte legível e moderna */
+    line-height: 1.6;
+    color: var(--cor-texto);
+    background-color: var(--off-white);
+}
+
+/* 2. Cabeçalho (Header e Navegação) */
+header {
+    background-color: var(--verde-escuro);
+    color: var(--off-white);
+    padding: 15px 0;
+    /* Usando Flexbox para alinhar logo, título e navegação */
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Distribui o espaço entre os elementos principais */
+    flex-wrap: wrap; /* Para garantir responsividade */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Garantir que o container use a largura máxima */
+    width: 100%; 
+    max-width: 1200px;
+}
+
+header img {
+    /* O HTML tem style inline, mas é bom ter uma regra aqui também */
+    width: 100px; 
+    height: auto;
+    margin-right: 20px;
+}
+
+header h1 {
+    color: var(--off-white);
+    margin: 0;
+    font-size: 1.8em;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li a {
+    color: var(--off-white);
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+header nav ul li a:hover {
+    background-color: var(--verde-claro);
+    color: var(--verde-escuro);
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: var(--verde-escuro);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.5em;
+    padding-top: 20px;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+header {
+    background-color: var(--verde-escuro);
+    color: var(--off-white);
+    padding: 20px 0;
+    text-align: center; /* Adicione conteúdo no HTML para um header mais completo */
+}
+
+/* 2. Seção Missão e Visão */
+.missao-section {
+    padding: 60px 0;
+    background-color: var(--verde-claro);
+    text-align: center;
+    border-bottom: 5px solid var(--verde-escuro); /* Separador visual */
+}
+
+.missao-section h1 {
+    color: var(--verde-escuro);
+    margin-bottom: 5px;
+}
+
+.missao-section h2 {
+    color: var(--cor-texto);
+    font-weight: 400;
+    font-style: italic;
+}
+
+.missao-section p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 20px auto 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5); /* Fundo sutil para o texto */
+    border-radius: 10px;
+}
+
+/* 3. Seção Time de Profissionais */
+.time-section {
+    padding: 80px 0;
+    background-color: var(--off-white);
+    text-align: center;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os blocos quebrem a linha em telas menores */
+    gap: 30px; /* Espaço entre os blocos */
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* Estilo para o Bloco do Profissional (Artigo) */
+.time-member {
+    background-color: white; /* Fundo branco puro para destaque */
+    padding: 25px;
+    border-radius: 20px; /* **Bordas Arredondadas solicitadas** */
+    box-shadow: 0 10px 20px rgba(29, 53, 87, 0.1); /* Sombra sutil com a cor escura */
+    text-align: center;
+    width: calc(33% - 30px); /* 3 colunas em telas maiores (ajustado pelo gap) */
+    min-width: 280px; /* Garante que o bloco não fique muito estreito */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.time-member:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 15px 30px rgba(29, 53, 87, 0.2);
+}
+
+.time-member img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Garante que a imagem preencha a área sem distorção */
+    border-radius: 50%; /* Imagem de perfil em círculo */
+    border: 5px solid var(--verde-claro); /* Borda com a cor clara */
+    margin-bottom: 15px;
+}
+
+.time-member h3 {
+    color: var(--verde-escuro);
+    margin-bottom: 5px;
+    font-size: 1.4em;
+}
+
+.time-member .cargo {
+    color: var(--verde-claro);
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block; /* Garante que o cargo tenha sua própria linha */
+}
+
+.time-member .bio {
+    font-size: 0.95em;
+    color: var(--cor-texto);
+    margin-top: 10px;
+}
+
+/* 4. Rodapé */
+footer {
+    background-color: var(--verde-escuro);
+    color: var(--off-white);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* 5. Responsividade (Media Queries) */
+@media (max-width: 1024px) {
+    .time-member {
+        width: calc(50% - 30px); /* 2 colunas em tablets */
+    }
+}
+
+@media (max-width: 650px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .time-member {
+        width: 100%; /* 1 coluna em celulares */
+    }
+
+    .missao-section, .time-section {
+        padding: 40px 0;
+    }
+}
+
+
+/* Mapa GOOGLEEEE */
+.map-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.map-container iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    text-align: center;
+    color: #388E3C;
+    margin-top: 40px;
+}
