@@ -1,14 +1,14 @@
-/* Definição das Variáveis de Cores (Consistente com as outras páginas) */
+/* 
 :root {
-    --verde-claro: #a8dadc; /* Verde/Ciano suave, frescor */
-    --verde-escuro: #1d3557; /* Azul/Verde marinho, confiança */
-    --off-white: #f1faee; /* Branco bem suave, fundo principal */
-    --cor-texto: #457b9d; /* Azul médio, legibilidade */
-    --cor-destaque: #e63946; /* Vermelho/Coral para CTAs */
-    --cor-sucesso: #70c1b3; /* Um verde intermediário para sucesso */
+    --verde-claro: #a8dadc; 
+    --verde-escuro: #1d3557; 
+    --off-white: #f1faee;
+    --cor-texto: #457b9d; 
+    --cor-destaque: #e63946;
+    --cor-sucesso: #70c1b3; 
 }
 
-/* 1. Reset e Estilos Base */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -34,29 +34,29 @@ h1, h2, h3 {
     font-weight: 700;
 }
 
-/* 2. Cabeçalho (Header e Navegação) */
+
 header {
     background-color: var(--verde-escuro);
     color: var(--off-white);
     padding: 15px 0;
-    /* Usando Flexbox para alinhar logo, título e navegação */
+
     display: flex;
     align-items: center;
-    justify-content: space-around; /* Distribui o espaço entre os elementos principais */
-    flex-wrap: wrap; /* Para garantir responsividade */
+    justify-content: space-around; 
+    flex-wrap: wrap; 
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* Garantir que o container use a largura máxima */
+    
     width: 100%; 
     max-width: 1200px;
 }
 
 header img {
-    /* O HTML tem style inline, mas é bom ter uma regra aqui também */
+    
     width: 100px; 
     height: auto;
     margin-right: 20px;
@@ -87,13 +87,13 @@ header nav ul li a:hover {
     color: var(--verde-escuro);
 }
 
-/* 3. Hero Section (A primeira grande tela) */
+
 .hero {
     background-color: var(--verde-claro);
     padding: 100px 20px;
     text-align: center;
     min-height: 400px;
-    /* Gradiente para um visual moderno (opcional, mas sofisticado) */
+    
     background-image: linear-gradient(135deg, var(--verde-claro) 0%, var(--verde-claro) 70%, var(--off-white) 100%); 
 }
 
@@ -113,7 +113,7 @@ header nav ul li a:hover {
     color: var(--verde-escuro);
 }
 
-/* 4. Botão CTA principal */
+
 .btn-cta {
     display: inline-block;
     background-color: var(--cor-destaque);
@@ -132,7 +132,7 @@ header nav ul li a:hover {
     transform: scale(1.05);
 }
 
-/* 5. Seção de Serviços (Grid) */
+
 .servicos-section {
     padding: 60px 0;
     background-color: var(--off-white);
@@ -148,18 +148,18 @@ header nav ul li a:hover {
     display: flex;
     justify-content: space-around;
     gap: 30px;
-    flex-wrap: wrap; /* Responsividade */
+    flex-wrap: wrap; 
 }
 
 .servico-item {
     background-color: white;
     padding: 30px;
-    border-radius: 15px; /* Blocos Arredondados */
+    border-radius: 15px; 
     box-shadow: 0 8px 15px rgba(29, 53, 87, 0.1);
-    width: 30%; /* 3 itens por linha */
+    width: 30%; 
     min-width: 280px;
     transition: transform 0.3s ease, border-top 0.3s;
-    border-top: 5px solid var(--verde-escuro); /* Linha de destaque */
+    border-top: 5px solid var(--verde-escuro); 
 }
 
 .servico-item:hover {
@@ -178,7 +178,7 @@ header nav ul li a:hover {
     color: var(--cor-texto);
 }
 
-/* 6. Seção Blog/Sobre Nós (Chamada secundária) */
+
 .SobreNós-section {
     background-color: var(--verde-escuro);
     color: var(--off-white);
@@ -213,7 +213,7 @@ header nav ul li a:hover {
     background-color: white;
 }
 
-/* 7. Rodapé */
+
 footer {
     background-color: var(--verde-escuro);
     color: var(--off-white);
@@ -222,10 +222,10 @@ footer {
     border-top: 3px solid var(--verde-claro);
 }
 
-/* 8. Responsividade */
+
 @media (max-width: 900px) {
     .servico-item {
-        width: 45%; /* 2 colunas em tablets */
+        width: 45%; 
     }
 
     .hero h2 {
@@ -255,6 +255,331 @@ footer {
     }
 
     .servico-item {
-        width: 100%; /* 1 coluna em celulares */
+        width: 100%; 
     }
+} */
+
+/* =========================
+   VARIÁVEIS DE COR
+========================= */
+:root {
+  --verde-claro: #a8dadc;
+  --verde-escuro: #1d3557;
+  --off-white: #f1faee;
+  --cor-texto: #457b9d;
+  --cor-destaque: #e63946;
+  --cor-sucesso: #70c1b3;
+}
+
+/* =========================
+   RESET E BASE
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: var(--cor-texto);
+  background-color: var(--off-white);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem; /* 20px */
+}
+
+h1, h2, h3 {
+  color: var(--verde-escuro);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+header {
+  background-color: var(--verde-escuro);
+  color: var(--off-white);
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+header img {
+  width: 6rem; /* 96px */
+  height: auto;
+  margin-right: 1rem;
+}
+
+header h1 {
+  color: var(--off-white);
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+header nav ul li a {
+  color: var(--off-white);
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+}
+
+header nav ul li a:hover {
+  background-color: var(--verde-claro);
+  color: var(--verde-escuro);
+}
+
+/* =========================
+   HERO (INÍCIO)
+========================= */
+.hero {
+  background-color: var(--verde-claro);
+  padding: 6rem 1.5rem;
+  text-align: center;
+  background-image: linear-gradient(
+    135deg,
+    var(--verde-claro) 0%,
+    var(--verde-claro) 70%,
+    var(--off-white) 100%
+  );
+}
+
+.hero h2 {
+  font-size: 2.8rem;
+  color: var(--verde-escuro);
+  margin-bottom: 1.2rem;
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  max-width: 43.75rem;
+  margin: 0 auto 2rem auto;
+  color: var(--verde-escuro);
+}
+
+.btn-cta {
+  display: inline-block;
+  background-color: var(--cor-destaque);
+  color: white;
+  text-decoration: none;
+  padding: 0.9rem 2rem;
+  border-radius: 3rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-cta:hover {
+  background-color: #c93540;
+  transform: scale(1.05);
+}
+
+/* =========================
+   SERVIÇOS
+========================= */
+.servicos-section {
+  padding: 4rem 1rem;
+  background-color: var(--off-white);
+  text-align: center;
+}
+
+.servicos-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.servicos-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.servico-item {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 15px rgba(29, 53, 87, 0.1);
+  width: 30%;
+  min-width: 17.5rem; /* 280px */
+  transition: transform 0.3s ease, border-top 0.3s;
+  border-top: 5px solid var(--verde-escuro);
+}
+
+.servico-item:hover {
+  transform: translateY(-5px);
+  border-top-color: var(--verde-claro);
+  box-shadow: 0 12px 20px rgba(29, 53, 87, 0.15);
+}
+
+.servico-item h3 {
+  color: var(--verde-escuro);
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.servico-item p {
+  color: var(--cor-texto);
+  font-size: 1rem;
+}
+
+/* =========================
+   SEÇÃO SOBRE NÓS
+========================= */
+.SobreNós-section {
+  background-color: var(--verde-escuro);
+  color: var(--off-white);
+  padding: 3.5rem 1rem;
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.SobreNós-section h2 {
+  color: var(--off-white);
+  margin-bottom: 0.8rem;
+}
+
+.SobreNós-section p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.btn-secundario {
+  display: inline-block;
+  background-color: var(--verde-claro);
+  color: var(--verde-escuro);
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-secundario:hover {
+  background-color: white;
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+footer {
+  background-color: var(--verde-escuro);
+  color: var(--off-white);
+  text-align: center;
+  padding: 1.2rem 0;
+  border-top: 3px solid var(--verde-claro);
+  font-size: 0.95rem;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+/* Tablets (até 900px) */
+@media (max-width: 900px) {
+  header .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .hero {
+    padding: 5rem 1rem;
+  }
+
+  .hero h2 {
+    font-size: 2.3rem;
+  }
+
+  .servico-item {
+    width: 45%;
+  }
+}
+
+/* Celulares (até 600px) */
+@media (max-width: 600px) {
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav ul li a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero {
+    padding: 3.5rem 1rem;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .servico-item {
+    width: 100%;
+  }
+
+  .servicos-section h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Telas muito pequenas (até 400px) */
+@media (max-width: 400px) {
+  header img {
+    width: 70px;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  .btn-cta {
+    font-size: 1rem;
+    padding: 0.7rem 1.3rem;
+  }
+
+  .servico-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .servico-item p {
+    font-size: 0.9rem;
+  }
 }

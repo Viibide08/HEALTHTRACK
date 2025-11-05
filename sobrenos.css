@@ -1,13 +1,12 @@
-/* Definição das Variáveis de Cores */
-:root {
-    --verde-claro: #a8dadc; /* Um verde/ciano suave, remetendo à frescura */
-    --verde-escuro: #1d3557; /* Um azul/verde marinho, forte e confiável */
-    --off-white: #f1faee; /* Branco bem suave, para evitar o brilho do branco puro */
-    --cor-texto: #457b9d; /* Um azul médio, mais legível que o verde escuro puro em fundos claros */
-    --cor-destaque: #e63946; /* Um toque de cor (vermelho/coral) para links e botões, opcional */
+
+/* :root {
+    --verde-claro: #a8dadc; 
+    --verde-escuro: #1d3557; 
+    --off-white: #f1faee; 
+    --cor-texto: #457b9d; 
+    --cor-destaque: #e63946; 
 }
 
-/* 1. Estilos Base e Tipografia */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,35 +14,35 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif; /* Fonte legível e moderna */
+    font-family: 'Arial', sans-serif; 
     line-height: 1.6;
     color: var(--cor-texto);
     background-color: var(--off-white);
 }
 
-/* 2. Cabeçalho (Header e Navegação) */
+
 header {
     background-color: var(--verde-escuro);
     color: var(--off-white);
     padding: 15px 0;
-    /* Usando Flexbox para alinhar logo, título e navegação */
+    
     display: flex;
     align-items: center;
-    justify-content: space-around; /* Distribui o espaço entre os elementos principais */
-    flex-wrap: wrap; /* Para garantir responsividade */
+    justify-content: space-around; 
+    flex-wrap: wrap; 
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* Garantir que o container use a largura máxima */
+    
     width: 100%; 
     max-width: 1200px;
 }
 
 header img {
-    /* O HTML tem style inline, mas é bom ter uma regra aqui também */
+   
     width: 100px; 
     height: auto;
     margin-right: 20px;
@@ -100,15 +99,15 @@ header {
     background-color: var(--verde-escuro);
     color: var(--off-white);
     padding: 20px 0;
-    text-align: center; /* Adicione conteúdo no HTML para um header mais completo */
+    text-align: center; 
 }
 
-/* 2. Seção Missão e Visão */
+
 .missao-section {
     padding: 60px 0;
     background-color: var(--verde-claro);
     text-align: center;
-    border-bottom: 5px solid var(--verde-escuro); /* Separador visual */
+    border-bottom: 5px solid var(--verde-escuro); 
 }
 
 .missao-section h1 {
@@ -127,11 +126,11 @@ header {
     max-width: 800px;
     margin: 20px auto 0 auto;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.5); /* Fundo sutil para o texto */
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
 }
 
-/* 3. Seção Time de Profissionais */
+
 .time-section {
     padding: 80px 0;
     background-color: var(--off-white);
@@ -140,35 +139,35 @@ header {
 
 .team-grid {
     display: flex;
-    flex-wrap: wrap; /* Permite que os blocos quebrem a linha em telas menores */
-    gap: 30px; /* Espaço entre os blocos */
+    flex-wrap: wrap; 
+    gap: 30px; 
     justify-content: center;
     margin-top: 40px;
 }
 
-/* Estilo para o Bloco do Profissional (Artigo) */
+
 .time-member {
-    background-color: white; /* Fundo branco puro para destaque */
+    background-color: white; 
     padding: 25px;
-    border-radius: 20px; /* **Bordas Arredondadas solicitadas** */
-    box-shadow: 0 10px 20px rgba(29, 53, 87, 0.1); /* Sombra sutil com a cor escura */
+    border-radius: 20px; 
+    box-shadow: 0 10px 20px rgba(29, 53, 87, 0.1); 
     text-align: center;
-    width: calc(33% - 30px); /* 3 colunas em telas maiores (ajustado pelo gap) */
-    min-width: 280px; /* Garante que o bloco não fique muito estreito */
+    width: calc(33% - 30px); 
+    min-width: 280px; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .time-member:hover {
-    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+    transform: translateY(-5px); 
     box-shadow: 0 15px 30px rgba(29, 53, 87, 0.2);
 }
 
 .time-member img {
     width: 150px;
     height: 150px;
-    object-fit: cover; /* Garante que a imagem preencha a área sem distorção */
-    border-radius: 50%; /* Imagem de perfil em círculo */
-    border: 5px solid var(--verde-claro); /* Borda com a cor clara */
+    object-fit: cover; 
+    border-radius: 50%; 
+    border: 5px solid var(--verde-claro);
     margin-bottom: 15px;
 }
 
@@ -182,7 +181,7 @@ header {
     color: var(--verde-claro);
     font-weight: 600;
     margin-bottom: 10px;
-    display: block; /* Garante que o cargo tenha sua própria linha */
+    display: block; 
 }
 
 .time-member .bio {
@@ -191,7 +190,7 @@ header {
     margin-top: 10px;
 }
 
-/* 4. Rodapé */
+
 footer {
     background-color: var(--verde-escuro);
     color: var(--off-white);
@@ -204,10 +203,9 @@ footer p {
     margin: 0;
 }
 
-/* 5. Responsividade (Media Queries) */
 @media (max-width: 1024px) {
     .time-member {
-        width: calc(50% - 30px); /* 2 colunas em tablets */
+        width: calc(50% - 30px);
     }
 }
 
@@ -221,7 +219,7 @@ footer p {
     }
 
     .time-member {
-        width: 100%; /* 1 coluna em celulares */
+        width: 100%; 
     }
 
     .missao-section, .time-section {
@@ -230,7 +228,7 @@ footer p {
 }
 
 
-/* Mapa GOOGLEEEE */
+
 .map-container {
     margin-top: 30px;
     display: flex;
@@ -250,4 +248,318 @@ h3 {
     text-align: center;
     color: #388E3C;
     margin-top: 40px;
+} */
+
+/* =========================
+   VARIÁVEIS DE COR
+========================= */
+:root {
+  --verde-claro: #a8dadc;
+  --verde-escuro: #1d3557;
+  --off-white: #f1faee;
+  --cor-texto: #457b9d;
+  --cor-destaque: #e63946;
+}
+
+/* =========================
+   RESET E BASE
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: var(--cor-texto);
+  background-color: var(--off-white);
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+header {
+  background-color: var(--verde-escuro);
+  color: var(--off-white);
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+header img {
+  width: 6rem; /* 96px */
+  height: auto;
+  margin-right: 1rem;
+}
+
+header h1 {
+  color: var(--off-white);
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+header nav ul li a {
+  color: var(--off-white);
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+}
+
+header nav ul li a:hover {
+  background-color: var(--verde-claro);
+  color: var(--verde-escuro);
+}
+
+/* =========================
+   CONTEÚDO GERAL
+========================= */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--verde-escuro);
+  margin-bottom: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 2.5rem;
+  padding-top: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+/* =========================
+   SEÇÃO MISSÃO
+========================= */
+.missao-section {
+  padding: 4rem 1rem;
+  background-color: var(--verde-claro);
+  text-align: center;
+  border-bottom: 5px solid var(--verde-escuro);
+}
+
+.missao-section h1 {
+  color: var(--verde-escuro);
+  margin-bottom: 0.5rem;
+}
+
+.missao-section h2 {
+  color: var(--cor-texto);
+  font-weight: 400;
+  font-style: italic;
+}
+
+.missao-section p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 1.5rem auto 0 auto;
+  padding: 1.25rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0.6rem;
+}
+
+/* =========================
+   SEÇÃO TIME
+========================= */
+.time-section {
+  padding: 5rem 1rem;
+  background-color: var(--off-white);
+  text-align: center;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.time-member {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 10px 20px rgba(29, 53, 87, 0.1);
+  text-align: center;
+  width: calc(33.33% - 2rem);
+  min-width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.time-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(29, 53, 87, 0.2);
+}
+
+.time-member img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid var(--verde-claro);
+  margin-bottom: 1rem;
+}
+
+.time-member h3 {
+  color: var(--verde-escuro);
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.time-member .cargo {
+  color: var(--verde-claro);
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  display: block;
+}
+
+.time-member .bio {
+  font-size: 0.95rem;
+  color: var(--cor-texto);
+  margin-top: 0.5rem;
+}
+
+/* =========================
+   MAPA
+========================= */
+.map-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.map-container iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  border: 0;
+  border-radius: 0.6rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+footer {
+  background-color: var(--verde-escuro);
+  color: var(--off-white);
+  text-align: center;
+  padding: 1.25rem 0;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  header .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  .time-member {
+    width: calc(50% - 1rem);
+  }
+
+  .missao-section,
+  .time-section {
+    padding: 3rem 1rem;
+  }
+}
+
+/* Celulares */
+@media (max-width: 650px) {
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  header nav ul li a {
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .time-member {
+    width: 100%;
+  }
+
+  .missao-section,
+  .time-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .map-container iframe {
+    height: 300px;
+  }
+}
+
+/* Pequenos ajustes extras para telas muito pequenas */
+@media (max-width: 400px) {
+  header img {
+    width: 70px;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  .time-member img {
+    width: 120px;
+    height: 120px;
+  }
 }

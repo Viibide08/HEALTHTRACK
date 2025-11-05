@@ -1,14 +1,14 @@
-/* Definição das Variáveis de Cores (Consistente com 'sobrenos.css') */
-:root {
-    --verde-claro: #a8dadc; /* Verde/Ciano suave, frescor */
-    --verde-escuro: #1d3557; /* Azul/Verde marinho, confiança */
-    --off-white: #f1faee; /* Branco bem suave, fundo principal */
-    --cor-texto: #457b9d; /* Azul médio, legibilidade */
-    --cor-destaque: #e63946; /* Vermelho/Coral para CTAs */
-    --cor-sucesso: #70c1b3; /* Um verde intermediário para sucesso/WhatsApp */
+
+/* :root {
+    --verde-claro: #a8dadc;
+    --verde-escuro: #1d3557; 
+    --off-white: #f1faee; 
+    --cor-texto: #457b9d; 
+    --cor-destaque: #e63946; 
+    --cor-sucesso: #70c1b3; 
 }
 
-/* 1. Reset e Estilos Base */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -34,16 +34,16 @@ h1, h2, h3 {
     font-weight: 700;
 }
 
-/* 2. Cabeçalho (Header) */
+
 header {
     background-color: var(--verde-escuro);
     color: var(--off-white);
     padding: 15px 0;
-    /* Usando Flexbox para alinhar logo, título e navegação */
+   
     display: flex;
     align-items: center;
-    justify-content: space-around; /* Distribui o espaço entre os elementos principais */
-    flex-wrap: wrap; /* Para garantir responsividade */
+    justify-content: space-around; 
+    flex-wrap: wrap; 
     
 }
 
@@ -51,7 +51,7 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* Garantir que o container use a largura máxima */
+   
     width: 100%; 
     max-width: 1200px;
 }
@@ -81,7 +81,7 @@ header nav ul li a:hover {
     color: var(--verde-escuro);
 }
 
-/* 3. Seção Hero (Título) */
+
 .hero-servicos {
     background-color: var(--verde-claro);
     padding: 80px 0;
@@ -100,20 +100,20 @@ header nav ul li a:hover {
     opacity: 0.9;
 }
 
-/* 4. Estilo das Seções de Serviços (Blocos) */
+
 .servico-detalhe {
     padding: 80px 0;
 }
 
-/* Fundo claro para a primeira seção */
+
 .servico-detalhe.cor-clara {
     background-color: var(--off-white);
 }
 
-/* Fundo verde claro para a seção de destaque */
+
 .servico-detalhe.cor-verde {
     background-color: var(--verde-claro);
-    color: var(--verde-escuro); /* Texto mais escuro para contraste */
+    color: var(--verde-escuro);
 }
 
 .servico-detalhe.cor-verde h2,
@@ -134,7 +134,6 @@ header nav ul li a:hover {
     margin-bottom: 40px;
 }
 
-/* Estilizando a lista de Funcionalidades */
 .features-list {
     background-color: white;
     padding: 30px;
@@ -152,7 +151,7 @@ header nav ul li a:hover {
 .features-list ul {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Layout em colunas */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 15px 30px;
 }
 
@@ -162,19 +161,19 @@ header nav ul li a:hover {
     font-size: 1.05em;
 }
 
-/* Ícone de check para os itens da lista */
+
 .features-list ul li::before {
     content: '✓';
-    color: var(--cor-texto); /* Usa a cor do texto para o ícone */
+    color: var(--cor-texto); 
     font-weight: bold;
     font-size: 1.2em;
     position: absolute;
     left: 0;
 }
 
-/* Estilizando a seção de Consultas/Como Agendar */
+
 .consultas-info {
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente no verde */
+    background-color: rgba(255, 255, 255, 0.8); 
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -198,28 +197,28 @@ header nav ul li a:hover {
     font-style: italic;
 }
 
-/* 5. Botões CTA (Chamada para Ação) */
+
 .btn-cta {
     display: inline-block;
     background-color: var(--cor-destaque);
     color: white;
     text-decoration: none;
     padding: 15px 30px;
-    border-radius: 50px; /* Botão arredondado */
+    border-radius: 50px; 
     font-weight: bold;
     font-size: 1.1em;
     transition: background-color 0.3s, transform 0.3s;
 }
 
 .btn-cta:hover {
-    background-color: #c93540; /* Um tom mais escuro */
+    background-color: #c93540; 
     transform: translateY(-2px);
 }
 
-/* Botão WhatsApp */
+
 .btn-whatsapp {
     display: inline-block;
-    background-color: #25d366; /* Cor oficial do WhatsApp */
+    background-color: #25d366; 
     color: white;
     text-decoration: none;
     padding: 15px 30px;
@@ -236,7 +235,7 @@ header nav ul li a:hover {
     box-shadow: 0 6px 15px rgba(18, 140, 126, 0.6);
 }
 
-/* 6. Seção de Diferenciais (Grid de Cards) */
+
 .diferenciais-section {
     padding: 60px 0;
     text-align: center;
@@ -254,13 +253,13 @@ header nav ul li a:hover {
 .diferencial-item {
     background-color: white;
     padding: 30px;
-    border-radius: 15px; /* Cards Arredondados */
+    border-radius: 15px; 
     box-shadow: 0 10px 20px rgba(29, 53, 87, 0.08);
     width: 30%;
     min-width: 250px;
     text-align: left;
     transition: box-shadow 0.3s, border 0.3s;
-    border-bottom: 4px solid var(--verde-escuro); /* Destaque na parte inferior */
+    border-bottom: 4px solid var(--verde-escuro); 
 }
 
 .diferencial-item:hover {
@@ -276,7 +275,7 @@ header nav ul li a:hover {
     padding-left: 30px;
 }
 
-/* Icone de bolinha verde para os diferenciais */
+
 .diferencial-item h3::before {
     content: '•';
     color: var(--verde-claro);
@@ -286,7 +285,7 @@ header nav ul li a:hover {
     top: -5px;
 }
 
-/* 7. Rodapé */
+
 footer {
     background-color: var(--verde-escuro);
     color: var(--off-white);
@@ -295,10 +294,10 @@ footer {
     margin-top: 50px;
 }
 
-/* 8. Responsividade */
+
 @media (max-width: 900px) {
     .diferencial-item {
-        width: 45%; /* Duas colunas em tablets */
+        width: 45%; 
     }
 }
 
@@ -313,16 +312,16 @@ footer {
     }
 
     .diferencial-item {
-        width: 100%; /* Uma coluna em celulares */
+        width: 100%; 
     }
 
     .features-list ul {
-        grid-template-columns: 1fr; /* Uma coluna na lista */
+        grid-template-columns: 1fr;
     }
 }
 
 
-/* Formulário de contato */
+
 .contato-form {
     display: flex;
     flex-direction: column;
@@ -371,4 +370,407 @@ footer {
 
 .contato-form button:hover {
     background-color: #689F38;
+} */
+
+
+/* ==============================
+   VARIÁVEIS DE CORES
+============================== */
+:root {
+  --verde-claro: #a8dadc;
+  --verde-escuro: #1d3557;
+  --off-white: #f1faee;
+  --cor-texto: #457b9d;
+  --cor-destaque: #e63946;
+  --cor-sucesso: #70c1b3;
+}
+
+/* ==============================
+   RESET E ESTILOS BASE
+============================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px; /* base para rem */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: var(--cor-texto);
+  background-color: var(--off-white);
+}
+
+.container {
+  max-width: 75rem; /* ~1200px */
+  margin: 0 auto;
+  padding: 0 1.25rem; /* ~20px */
+}
+
+h1, h2, h3 {
+  color: var(--verde-escuro);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+/* ==============================
+   CABEÇALHO
+============================== */
+header {
+  background-color: var(--verde-escuro);
+  color: var(--off-white);
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 75rem;
+}
+
+header h1 {
+  color: var(--off-white);
+  font-size: 1.8rem;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+header nav ul li a {
+  color: var(--off-white);
+  text-decoration: none;
+  padding: 0.625rem 1rem;
+  border-radius: 0.4rem;
+  transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+  background-color: var(--verde-claro);
+  color: var(--verde-escuro);
+}
+
+/* ==============================
+   SEÇÃO HERO
+============================== */
+.hero-servicos {
+  background-color: var(--verde-claro);
+  padding: 5rem 1rem;
+  text-align: center;
+}
+
+.hero-servicos h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-servicos p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* ==============================
+   SEÇÕES DE SERVIÇOS
+============================== */
+.servico-detalhe {
+  padding: 5rem 0;
+}
+
+.servico-detalhe.cor-clara {
+  background-color: var(--off-white);
+}
+
+.servico-detalhe.cor-verde {
+  background-color: var(--verde-claro);
+  color: var(--verde-escuro);
+}
+
+.servico-detalhe h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.3rem;
+}
+
+.servico-detalhe .subtitle {
+  text-align: center;
+  font-style: italic;
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+/* ==============================
+   LISTA DE FUNCIONALIDADES
+============================== */
+.features-list {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2.5rem;
+  border-left: 5px solid var(--verde-claro);
+}
+
+.features-list h3 {
+  color: var(--cor-destaque);
+  margin-bottom: 1rem;
+}
+
+.features-list ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1rem 2rem;
+}
+
+.features-list ul li {
+  padding-left: 1.8rem;
+  position: relative;
+  font-size: 1rem;
+}
+
+.features-list ul li::before {
+  content: '✓';
+  color: var(--cor-texto);
+  font-weight: bold;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+}
+
+/* ==============================
+   CONSULTAS
+============================== */
+.consultas-info {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2.5rem;
+}
+
+.consultas-info h3 {
+  color: var(--verde-escuro);
+  border-bottom: 2px solid var(--verde-escuro);
+  padding-bottom: 0.3rem;
+}
+
+.consultas-info ol {
+  margin: 1.5rem 0 1.5rem 1.5rem;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.consultas-info p {
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* ==============================
+   BOTÕES
+============================== */
+.btn-cta,
+.btn-whatsapp {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.btn-cta {
+  background-color: var(--cor-destaque);
+  color: white;
+}
+
+.btn-cta:hover {
+  background-color: #c93540;
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+  background-color: #25d366;
+  color: white;
+  margin-top: 1.2rem;
+  box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
+}
+
+.btn-whatsapp:hover {
+  background-color: #128c7e;
+  box-shadow: 0 6px 15px rgba(18, 140, 126, 0.6);
+}
+
+/* ==============================
+   DIFERENCIAIS
+============================== */
+.diferenciais-section {
+  padding: 4rem 0;
+  text-align: center;
+  border-top: 2px solid var(--verde-claro);
+}
+
+.diferenciais-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.diferencial-item {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(29, 53, 87, 0.08);
+  width: 30%;
+  min-width: 15rem;
+  text-align: left;
+  transition: 0.3s;
+  border-bottom: 4px solid var(--verde-escuro);
+}
+
+.diferencial-item:hover {
+  box-shadow: 0 15px 30px rgba(29, 53, 87, 0.15);
+  border-bottom-color: var(--cor-destaque);
+}
+
+.diferencial-item h3 {
+  color: var(--verde-escuro);
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.diferencial-item h3::before {
+  content: '•';
+  color: var(--verde-claro);
+  font-size: 2rem;
+  position: absolute;
+  left: 0;
+  top: -5px;
+}
+
+/* ==============================
+   RODAPÉ
+============================== */
+footer {
+  background-color: var(--verde-escuro);
+  color: var(--off-white);
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+}
+
+/* ==============================
+   FORMULÁRIO DE CONTATO
+============================== */
+.contato-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.contato-form label {
+  font-weight: bold;
+  color: #388e3c;
+}
+
+.contato-form input,
+.contato-form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus {
+  border-color: #8bc34a;
+  outline: none;
+  box-shadow: 0 0 5px rgba(139, 195, 74, 0.4);
+}
+
+.contato-form button {
+  align-self: center;
+  background-color: #8bc34a;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contato-form button:hover {
+  background-color: #689f38;
+}
+
+/* ==============================
+   RESPONSIVIDADE
+============================== */
+@media (max-width: 900px) {
+  .diferencial-item {
+    width: 45%;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-servicos {
+    padding: 3rem 1rem;
+  }
+
+  .hero-servicos h1 {
+    font-size: 2rem;
+  }
+
+  header .container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .features-list ul {
+    grid-template-columns: 1fr;
+  }
+
+  .diferenciais-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .diferencial-item {
+    width: 100%;
+  }
+
+  .btn-cta,
+  .btn-whatsapp {
+    width: 100%;
+    text-align: center;
+  }
 }
